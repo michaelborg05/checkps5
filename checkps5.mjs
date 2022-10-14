@@ -1,6 +1,7 @@
 import fetch from 'node-fetch';
-
-fetch("https://api.bigw.com.au/api/availability/v0/product/124626?storeId=0117&deliveryPostcode=2137&deliverySuburb=NORTH%20STRATHFIELD", {
+const itemno = "124626"
+const url = "https://api.bigw.com.au/api/availability/v0/product/${my_name}?storeId=0117&deliveryPostcode=2137&deliverySuburb=NORTH%20STRATHFIELD"
+fetch(url, {
     "headers": {
       "accept": "application/json, text/plain, */*",
       "accept-language": "en-US,en;q=0.5",
@@ -20,6 +21,11 @@ fetch("https://api.bigw.com.au/api/availability/v0/product/124626?storeId=0117&d
   console.log("Json details");
   console.log(json[0]);
   console.log(json.products);
+  for(var attr in json.products){
+    console.log(attr +": "+json.products[attr]);
+
+  }
+}
 });  
 
 
