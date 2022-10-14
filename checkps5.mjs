@@ -23,9 +23,7 @@ fetch(url, {
   console.log(json.products);
   for(var attr in json.products){
     console.log(attr +": "+json.products[attr]);
-
   }
-}
 });  
 
 
