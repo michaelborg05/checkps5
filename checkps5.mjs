@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
-const itemno = "124626"
-const url = "https://api.bigw.com.au/api/availability/v0/product/${itemno}?storeId=0117&deliveryPostcode=2137&deliverySuburb=NORTH%20STRATHFIELD"
+const itemno = "124626";
+const url = "https://api.bigw.com.au/api/availability/v0/product/${itemno}?storeId=0117&deliveryPostcode=2137&deliverySuburb=NORTH%20STRATHFIELD";
 console.log(url);
 fetch(url, {
     "headers": {
