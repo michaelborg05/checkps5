@@ -1,10 +1,10 @@
-﻿#$ItemNo = "124626"
-#$ItemDescription = "PS5 Digital Console"
-$ItemNo = "124628"
-$ItemDescription="PS5 DualSense charging station"
+$ItemNo = "124626"
+$ItemDescription = "PS5 Digital Console"
+#$ItemNo = "124628"
+#$ItemDescription="PS5 DualSense charging station"
 
 #$BigWURL = "https://api.bigw.com.au/api/availability/v0/product/$ItemNo?storeId=0117&deliveryPostcode=2137&deliverySuburb=NORTH%20STRATHFIELD"
-$outputfile = "C:\temp\bigwSite2.txt" 
+$outputfile = "bigwSite2.txt" 
 $global:MaxAlerts = 1
 $global:AlertCount=0
 
@@ -28,7 +28,7 @@ Function Send-Telegram {
 Function write-log {
 Param([Parameter(Mandatory=$true)][String]$msg)
    $CurrTime = Get-Date
-    Write-Output "$CurrTime $msg" >> C:\Michael\Scripts\bigWsite.txt
+    Write-Output "$CurrTime $msg" >> $outputfile
 
 }
 
